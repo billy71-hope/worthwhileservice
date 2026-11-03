@@ -56,7 +56,7 @@ function Field({ id, label, required, error, children }) {
 export default function Booking() {
   const [data, setData] = useState(empty);
   const [errors, setErrors] = useState({});
-  const [status, setStatus] = useState({ text: "Envoi via WhatsApp — un nouvel onglet va s'ouvrir.", kind: "" });
+  const [status, setStatus] = useState({ text: "", kind: "" });
 
   const set = (name) => (e) => {
     const value = e.target.value;

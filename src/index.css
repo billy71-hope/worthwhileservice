@@ -183,12 +183,6 @@ button { font: inherit; }
 }
 
 .hero-grid { display: grid; grid-template-columns: 1.05fr 1fr; gap: clamp(2rem, 5vw, 5rem); align-items: center; }
-.hero-badge {
-  display: inline-flex; align-items: center; gap: .6rem;
-  padding: .5rem 1rem; border-radius: 999px; margin-bottom: 1.8rem;
-  background: rgba(255,255,255,.8); border: 1px solid var(--line-strong); backdrop-filter: blur(10px);
-  font-size: .82rem; font-weight: 700; color: var(--navy);
-}
 .live-dot { position: relative; width: 8px; height: 8px; border-radius: 50%; background: var(--gold); }
 .live-dot::after { content: ""; position: absolute; inset: -4px; border-radius: 50%; border: 2px solid var(--gold); animation: ping 1.8s ease-out infinite; }
 @keyframes ping { from { transform: scale(.5); opacity: 1; } to { transform: scale(1.8); opacity: 0; } }
@@ -407,8 +401,6 @@ button { font: inherit; }
 .footer-giant { font-family: var(--f-display); font-size: clamp(4rem, 17vw, 15rem); line-height: .85; letter-spacing: -.03em; color: var(--white); margin: 0 0 3.5rem; }
 .footer-giant em { font-style: normal; }
 .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 2.5rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(255,255,255,.12); }
-.footer-name { font-family: var(--f-display); font-size: 2rem; color: var(--white); margin-bottom: .6rem; }
-.footer-name em { color: var(--gold-light); }
 .footer-h { font-size: .74rem; font-weight: 800; letter-spacing: .2em; text-transform: uppercase; color: var(--gold-light); margin-bottom: 1.2rem; }
 .footer-col p { margin-bottom: .55rem; }
 .footer-col span { display: inline-block; min-width: 5.5rem; font-size: .8rem; color: var(--sky-200); }

@@ -18,7 +18,6 @@ export default function Footer() {
 
         <div className="footer-grid">
           <Reveal className="footer-brand">
-            <p className="footer-name">Worthwhile <em>Service</em></p>
             <p>Maintenance mécanique et automobile — poids lourds &amp; engins de chantier.</p>
           </Reveal>
           <Reveal as="address" className="footer-col" delay={0.1}>
@@ -39,7 +38,6 @@ export default function Footer() {
 
         <div className="footer-legal">
           <p>© {new Date().getFullYear()} Worthwhile Service. Tous droits réservés.</p>
-          <p>Mentions légales : Worthwhile Service — Abomey-Calavi / Hêvié, Bénin. Les données saisies dans le formulaire sont transmises uniquement via WhatsApp et ne sont pas stockées sur ce site.</p>
           <a className="to-top" href="#top">Haut de page ↑</a>
         </div>
       </div>

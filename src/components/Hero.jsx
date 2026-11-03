@@ -35,15 +35,6 @@ export default function Hero() {
 
       <div className="wrap hero-grid">
         <motion.div className="hero-copy" style={{ y: yText, opacity: fade }}>
-          <motion.p
-            className="hero-badge"
-            initial={{ opacity: 0, y: 20, scale: 0.9 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            transition={{ duration: 0.8, ease, delay: 0.2 }}
-          >
-            <span className="live-dot" /> Poids lourds &amp; engins de chantier · Bénin
-          </motion.p>
-
           <SplitTitle
             as="h1"
             id="hero-title" className="hero-title"
