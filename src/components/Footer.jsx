@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Reveal, ease } from "./ui.jsx";
+import { MAPS_DIRECTIONS } from "./Location.jsx";
 
 export default function Footer() {
   return (
@@ -25,7 +26,7 @@ export default function Footer() {
             <p><span>Tél</span> <a href="tel:+2290151125456">01 51 12 54 56</a></p>
             <p><span>WhatsApp</span> <a href="https://wa.me/2290197643212" target="_blank" rel="noopener">01 97 64 32 12</a></p>
             <p><span>Mail</span> <a href="mailto:worthwhileservices3@gmail.com">worthwhileservices3@gmail.com</a></p>
-            <p><span>Adresse</span> Abomey-Calavi / Hêvié, Bénin</p>
+            <p><span>Adresse</span> <a href={MAPS_DIRECTIONS} target="_blank" rel="noopener">Abomey-Calavi / Hêvié, Bénin</a></p>
           </Reveal>
           <Reveal className="footer-col" delay={0.2}>
             <p className="footer-h">Navigation</p>
@@ -33,6 +34,7 @@ export default function Footer() {
             <p><a href="#savoir-faire">Savoir-faire</a></p>
             <p><a href="#methode">Méthode</a></p>
             <p><a href="#rendez-vous">Prendre rendez-vous</a></p>
+            <p><a href="#localisation">Localisation</a></p>
           </Reveal>
         </div>
 

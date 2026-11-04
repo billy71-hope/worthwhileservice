@@ -6,6 +6,7 @@ const links = [
   ["#expertises", "Expertises"],
   ["#savoir-faire", "Atelier"],
   ["#methode", "Méthode"],
+  ["#localisation", "Accès"],
   ["#contact", "Contact"],
 ];
 

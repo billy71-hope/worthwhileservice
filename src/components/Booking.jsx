@@ -57,6 +57,7 @@ export default function Booking() {
   const [data, setData] = useState(empty);
   const [errors, setErrors] = useState({});
   const [status, setStatus] = useState({ text: "", kind: "" });
+  const [waUrl, setWaUrl] = useState("");
 
   const set = (name) => (e) => {
     const value = e.target.value;
@@ -79,6 +80,7 @@ export default function Booking() {
     const firstInvalid = Object.keys(rules).find((k) => next[k]);
     if (firstInvalid) {
       document.getElementById(`f-${firstInvalid}`).focus();
+      setWaUrl("");
       setStatus({ text: "Certains champs sont à compléter.", kind: "is-error" });
       return;
     }
@@ -98,15 +100,23 @@ export default function Booking() {
     ];
 
     const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(lines.join("\n"))}`;
+    setWaUrl(url);
+    setStatus({ text: "Demande prête — validez l'envoi dans WhatsApp.", kind: "is-ok" });
+
+    // Mobile : ouverture directe de l'application (évite un onglet vide et les
+    // navigateurs intégrés Facebook/Instagram qui bloquent les popups).
+    if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+      window.location.href = url;
+      return;
+    }
+    // Ordinateur : WhatsApp Web dans un nouvel onglet.
     // Pas de "noopener" dans les features : sinon window.open renvoie toujours null.
     const win = window.open(url, "_blank");
     if (win) {
       win.opener = null;
     } else {
-      // Popup bloquée : on redirige dans l'onglet courant
       window.location.href = url;
     }
-    setStatus({ text: "Demande prête — validez l'envoi dans WhatsApp.", kind: "is-ok" });
   };
 
   return (
@@ -209,6 +219,11 @@ export default function Booking() {
                 {status.text}
               </motion.p>
             </AnimatePresence>
+            {waUrl && (
+              <a className="form-fallback" href={waUrl} target="_blank" rel="noopener">
+                WhatsApp ne s'est pas ouvert ? Cliquez ici
+              </a>
+            )}
           </div>
         </motion.form>
       </div>

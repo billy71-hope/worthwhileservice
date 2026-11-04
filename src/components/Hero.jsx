@@ -13,7 +13,7 @@ export default function Hero() {
   // Spotlight qui suit le pointeur + inclinaison de la carte
   const mx = useMotionValue(50);
   const my = useMotionValue(40);
-  const spotlight = useMotionTemplate`radial-gradient(600px circle at ${mx}% ${my}%, rgba(125,196,240,.35), transparent 60%)`;
+  const spotlight = useMotionTemplate`radial-gradient(600px circle at ${mx}% ${my}%, rgba(212,175,95,.14), transparent 60%)`;
   const rx = useSpring(useTransform(my, [0, 100], [8, -8]), { stiffness: 120, damping: 20 });
   const ry = useSpring(useTransform(mx, [0, 100], [-10, 10]), { stiffness: 120, damping: 20 });
 

@@ -7,6 +7,7 @@ import Expertises from "./components/Expertises.jsx";
 import Craft from "./components/Craft.jsx";
 import Method from "./components/Method.jsx";
 import Booking from "./components/Booking.jsx";
+import Location from "./components/Location.jsx";
 import Footer from "./components/Footer.jsx";
 
 export default function App() {
@@ -26,6 +27,7 @@ export default function App() {
         <Craft />
         <Method />
         <Booking />
+        <Location />
       </main>
       <Footer />
     </>
