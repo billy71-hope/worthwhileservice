@@ -31,7 +31,6 @@ export default function Hero() {
         <motion.span className="blob b2" animate={{ x: [0, -70, 50, 0], y: [0, 50, -30, 0], scale: [1, 0.9, 1.1, 1] }} transition={{ duration: 22, repeat: Infinity, ease: "easeInOut" }} />
         <motion.span className="blob b3" animate={{ x: [0, 40, -60, 0], y: [0, 30, -50, 0] }} transition={{ duration: 16, repeat: Infinity, ease: "easeInOut" }} />
       </div>
-      <div className="grid-bg" aria-hidden="true" />
 
       <div className="wrap hero-grid">
         <motion.div className="hero-copy" style={{ y: yText, opacity: fade }}>

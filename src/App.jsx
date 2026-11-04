@@ -1,7 +1,6 @@
 import { motion, useScroll, useSpring } from "framer-motion";
 import Header from "./components/Header.jsx";
 import Hero from "./components/Hero.jsx";
-import Marquee from "./components/Marquee.jsx";
 import Stats from "./components/Stats.jsx";
 import Expertises from "./components/Expertises.jsx";
 import Craft from "./components/Craft.jsx";
@@ -21,7 +20,6 @@ export default function App() {
       <Header />
       <main id="main">
         <Hero />
-        <Marquee />
         <Stats />
         <Expertises />
         <Craft />
